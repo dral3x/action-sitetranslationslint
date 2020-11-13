@@ -12,8 +12,8 @@ docker build -t action-sitetranslationslint .
 #TODO echo "Testing WarningProject..."
 
 echo "Testing ErrorProject..."
-diff <(docker run --rm action-sitetranslationslint -v test/ErrorProject:test/ErrorProject -w test/ErrorProject|sort) test/ErrorProject/expected.txt
-STATUS=$(docker run --rm action-sitetranslationslint -v test/ErrorProject:test/ErrorProject -w test/ErrorProject &>/dev/null; echo $?)
+diff <(docker run -v $(pwd)/test/ErrorProject:$(pwd)/test/ErrorProject -w $(pwd)/test/ErrorProject --rm action-sitetranslationslint|sort) test/ErrorProject/expected.txt
+STATUS=$(docker run -v $(pwd)/test/ErrorProject:$(pwd)/test/ErrorProject -w $(pwd)/test/ErrorProject --rm action-sitetranslationslint &>/dev/null; echo $?)
 if [ $STATUS -ne 2 ]; then
     echo "Wrong exit code for ErrorProject: $STATUS"
     exit 1

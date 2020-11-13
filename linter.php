@@ -1,5 +1,7 @@
 <?php
 
+# Scan files in the current directory ('.')
+
 // Example of output that the linter should generate for this project
 echo "app/index.php:5: warning: Missing \"es_ES\" translation of localized string \"How are you?\".\n";
 echo "app/index.php:5: warning: Missing \"it_IT\" translation of localized string \"How are you?\".\n";

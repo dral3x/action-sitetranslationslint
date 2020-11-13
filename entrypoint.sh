@@ -11,4 +11,4 @@ function convertToGitHubActionsLoggingCommands() {
     sed -E 's/^(.*):([0-9]+): (warning|error|[^:]+): (.*)/::\3 file=\1,line=\2::\4/'
 }
 
-set -o pipefail && php ./linter.php "$@" -- | stripPWD | convertToGitHubActionsLoggingCommands
+set -o pipefail && php /linter.php "$@" -- | stripPWD | convertToGitHubActionsLoggingCommands
