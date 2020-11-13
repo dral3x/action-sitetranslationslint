@@ -1,0 +1,4 @@
+::error file=app/index.php,line=7::Missing all translations of localized string "Goodbye".
+::warning file=app/index.php,line=5::Missing "es_ES" translation of localized string "How are you?".
+::warning file=app/index.php,line=5::Missing "it_IT" translation of localized string "How are you?".
+::warning file=i18n/en_US/messages.po,line=5::Unused localized string "Howdy".
