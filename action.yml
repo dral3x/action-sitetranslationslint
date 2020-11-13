@@ -1,5 +1,5 @@
 name: 'GitHub Action for SiteTranslationsLint'
-description: 'Ensure our website localized strings are complete and never unused'
+description: 'Ensure your PHP website localized strings are complete and never unused'
 author: 'Spreaker Devs <support@spreaker.com>'
 runs:
   using: 'docker'
